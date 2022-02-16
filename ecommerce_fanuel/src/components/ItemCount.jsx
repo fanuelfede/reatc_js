@@ -17,8 +17,8 @@ const ItemCount = ({nombre}) => {
     
     
     
-    { contador > 5 && setContador(5)}
-    { contador < 1 && setContador(1)}
+    {contador > 5 && setContador(5)}
+    {contador < 1 && setContador(1)}
   </>
 }
 
