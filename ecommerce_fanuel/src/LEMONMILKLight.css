@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LEMONMILKLight';
+    src: url('fonts/LEMONMILKLight.eot');
+    src: url('fonts/LEMONMILKLight.eot') format('embedded-opentype'),
+         url('fonts/LEMONMILKLight.woff2') format('woff2'),
+         url('fonts/LEMONMILKLight.woff') format('woff'),
+         url('fonts/LEMONMILKLight.ttf') format('truetype'),
+         url('fonts/LEMONMILKLight.svg#LEMONMILKLight') format('svg');
+}

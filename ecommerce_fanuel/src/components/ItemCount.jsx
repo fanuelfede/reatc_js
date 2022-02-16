@@ -1,3 +1,4 @@
+import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React, {useState} from "react";
 
 
@@ -5,17 +6,21 @@ const ItemCount = ({nombre}) => {
     const [contador, setContador] = useState (1);
 
   return <>
-    <div className='derArriba'>{contador}</div>
-    <div className='derAbajo'>
-    <button className='meNos' onClick = {() => setContador (contador-1)}>restar</button>
-    <div className='eleMento'>PIZZAS</div>
-    <button className='mAs' onClick = {() => setContador (contador+1)}>sumar</button>
-    <button className='mAs' onClick = {() => setContador (1)}>resetear</button>
+    <div className="contadorProducto">
     
+    
+    <button className="masOmenos" onClick = {() => setContador (contador-1)}>-</button>
+    <div >{contador}</div>
+    <button className="masOmenos" onClick = {() => setContador (contador+1)}>+</button>
     </div>
-    { contador > 24 && setContador ("no hay ma pizza loco!") }
-    { contador < 1 && setContador ("no vendimo nada!") }
+    <button className="comprando" onClick = {() => setContador (1)}>comprar</button>
+    
+    
+    
+    { contador > 5 && setContador(5)}
+    { contador < 1 && setContador(1)}
   </>
 }
 
 export default ItemCount
+

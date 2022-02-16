@@ -66,82 +66,360 @@ li {
     transform: rotate(360deg);
   }
 }
+@font-face {
+  font-family: 'LEMONMILKLight';
+  src: url('fonts/LEMONMILKLight.eot');
+  src: url('fonts/LEMONMILKLight.eot') format('embedded-opentype'),
+       url('fonts/LEMONMILKLight.woff2') format('woff2'),
+       url('fonts/LEMONMILKLight.woff') format('woff'),
+       url('fonts/LEMONMILKLight.ttf') format('truetype'),
+       url('fonts/LEMONMILKLight.svg#LEMONMILKLight') format('svg');
+}
 
-.loguete{
-  height: 30px;
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+}
+/*
+#miVideo{
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  min-height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  height: auto;
+  width: auto;
+  opacity: 1;
+}*/
+
+#miVideo{
+  position: fixed; 
+  right: 0; 
+  bottom: 0;
+  min-width: 100vh; 
+  min-height: 100vh;
+  width: auto; 
+  height: auto; 
+  z-index: -100;
+  background-size: cover; 
+}
+
+.navBar{
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  margin: 0 auto;
+}
+
+.botonera{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  justify-content: space-around;
+  margin: 0px;
+  width: 55%;
+}
+
+.buscador{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 21%;
 }
 
 .carrito{
-  height: 30px;
-  transition: all 300ms;
+  display: flex;
+  width: 27px;
+  height: 27px;
+  transition: all 500ms;
   cursor: pointer;
+  opacity: 0.5;
 }
 
 .carrito:hover{
+  padding-left: 10px;
+  transition: all 100ms;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.logo{
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+li{
+  text-decoration: none;
+  list-style:none;
+}
+
+.botonMenu{
+  font-family: 'LEMONMILKLight';
+  font-size: 14px;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.botonMenu:hover{
+  color: aqua;
   opacity: 0.5;
   transition: all 300ms;
+  cursor: pointer;
 }
 
-.conTenedor{
-  margin: auto;
-  width: 90%;
+.contenedorHome{
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
-  height: 100%;
+  
 }
 
-.derecha{
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-  width: 50%;
-  height: 400px;
-  padding: 40px;
+.botonBuscar{
+  font-family: 'LEMONMILKLight';
+  font-size: 10px;
+  margin-right: 20px;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.botonBuscar:hover{
+  color: aqua;
+  opacity: 0.5;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.campoBuscar{
+  background-color: white;
+  opacity: 0.6;
+  border: none;
+  width: 80%;
+  height: 30px;
+  border-radius: 50px;
+  padding-left: 10px;
+  width: 158px;
+  font-family: 'LEMONMILKLight';
+  font-size: 10px;
+  color: #031320;
+  outline: 0;
 }
 
 .izquierda{
-  height: 400px;
-  width: 50%;
-  padding: 40px;
+  margin-top: 0px;
+  width: 45%;
+  height: 100%;
 }
 
-.derArriba{
-  font-size: 40px;
-}
-
-.derAbajo{
-  display: flex;
-  justify-content: space-around;
+.fotoIzquierda{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
 }
 
-.mAs{
+.titularSeccion{
+  color: white;
+ /* background-color: green; */
+  padding: 10px;
+  text-align: center;
+  font-family: 'LEMONMILKLight';
+  font-size: 22px;
+  letter-spacing: 30px;
+  opacity: 0.8;
+  margin-left: 25px;
+  
+}
+
+.derecha{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.subtituloSeccion{
+  font-family: 'LEMONMILKLight';
+  font-size: 12px;
+  letter-spacing: 15px;
+  color: white;
+  opacity: 0.8;
+  transition: all 300ms;
+  cursor: pointer;  
+}
+
+.subtituloSeccion:hover{
+  color: aqua;
+  opacity: 0.5;
   transition: all 300ms;
   cursor: pointer;
 }
 
-.mAs:hover{
-  opacity: 0.5;
-  transition: all 300ms;
+.contenedorSecciones{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5%;
+
 }
 
-.meNos{
-  transition: all 300ms;
+.izquierdaSecciones{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+
+}
+
+.derechaSecciones{
+  margin-top: 0px;
+  width: 90%;
+  height: 90vh;
+  border-radius: 50px;
+  display: flex;
+  background-color: rgba(255,255,255,0.8);
+  /* flex-direction: column; */
+  margin-bottom: 40px;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.promoProducto{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-width: 300px;
+  border-radius: 5px;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 4px 4px 7px #999;
+  transition: all 100ms;
+  cursor: pointer;  
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.promoProducto:hover{
+  box-shadow: 1px 1px 1px #999;
+  transition: all 100ms;
+  cursor: pointer;  
+}
+
+
+.contadorProducto{
+  display: flex;
+  align-items: center;
+  height: 10%;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+}
+
+.descripcionProducto{
+  height: 25%;
+}
+
+.fotoProducto1{
+  border-radius: 5px;
+  min-height: 200px;
+  background-image: url(./img/fotoChicaProducto1.jpg);
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+}
+
+.fotoProducto2{
+  border-radius: 5px;
+  background-image: url(./img/fotoChicaProducto2.jpg);
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+}
+
+.fotoProducto3{
+  border-radius: 5px;
+  background-image: url(./img/fotoChicaProducto3.jpg);
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+}
+
+.fotoProducto4{
+  border-radius: 5px;
+  background-image: url(./img/fotoChicaProducto4.jpg);
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+}
+
+.detallePrecio{
+  font-family: 'LEMONMILKLight';
+  font-size: 16px;
+  /* padding: 10px; */
+  padding-left: 15px;
+  letter-spacing: 5px;
+  padding-top: 15px;
+}
+
+.precio{
+  padding-left: 15px;
+  font-family: 'LEMONMILKLight';
+  font-size: 14px;
+}
+
+.comprando{
+  /*background-color: yellow;*/
+  font-family: 'LEMONMILKLight';
+  font-size: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 2px;
+  margin-bottom: 3px;
+  margin-left: 13px;
+  transition: all 100ms;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.comprando:hover{
+  text-shadow: 1px 1px 1px #999;
+  opacity: 0.8;
+  transition: all 100ms;
   cursor: pointer;
 }
 
-.meNos:hover{
-  opacity: 0.5;
-  transition: all 300ms;
+.masOmenos{
+  font-family: 'LEMONMILKLight';
+  font-size: 14px;
+  transition: all 100ms;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
-.mAs:active{
-  color: red;
-  transition: all 300ms;
-}
-
-.meNos:active{
-  color: red;
-  transition: all 300ms;
+.masOmenos:hover{
+  text-shadow: 1px 1px 1px #999;
+  opacity: 0.8;
+  color: cornflowerblue;
+  transition: all 100ms;
+  cursor: pointer;
 }

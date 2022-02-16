@@ -1,14 +1,18 @@
 
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import SeccionHome from './components/SeccionHome';
+import SeccionPromo from './components/SeccionPromo';
+import VideoFondo from './components/VideoFondo';
 
 
 function App() {
   return (
     <>
     <NavBar />
-    <ItemListContainer/>
+    <SeccionHome/>
+    <SeccionPromo/>
+    <VideoFondo/>
     </>
   );
 }
