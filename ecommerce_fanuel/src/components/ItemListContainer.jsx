@@ -1,18 +1,17 @@
 import React from 'react';
 import ItemCount from './ItemCount';
+import ItemPhoto from './ItemPhoto';
+import ItemDescription from './ItemDescription';
 
-const ItemListContainer = ({cantidades}) => {
+const ItemListContainer = () => {
   return <>
-        <div className="promoProducto">
-            <div className="fotoProducto1"></div>
-            <div className="descripcionProducto">
-            <h1 className="detallePrecio">Vestido Lalala</h1>
-            <h2 className="precio">$23.000.-</h2>
-          </div>
-          <ItemCount/>
-      </div>
-      </>
-  ;
+    <div className="promoProducto">
+      <ItemPhoto foto={"fotoProducto1"} />
+      <ItemDescription nombre={"vestido lalala"} precio={"22.000.-"} />
+      <ItemCount stock={5} initial={1} />
+    </div>
+  </>
+    ;
 };
 
 export default ItemListContainer;

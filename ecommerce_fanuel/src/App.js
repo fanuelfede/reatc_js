@@ -9,10 +9,10 @@ import VideoFondo from './components/VideoFondo';
 function App() {
   return (
     <>
-    <NavBar />
-    <SeccionHome/>
-    <SeccionPromo/>
-    <VideoFondo/>
+      <NavBar />
+      <SeccionHome />
+      <SeccionPromo />
+      <VideoFondo />
     </>
   );
 }

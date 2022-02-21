@@ -1,26 +1,33 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
-import React, {useState} from "react";
+
+import React, { useState } from "react";
 
 
-const ItemCount = ({nombre}) => {
-    const [contador, setContador] = useState (1);
+const ItemCount = ({ stock, initial }) => {
+  const [contador, setContador] = useState(1);
+
+  function onAdd() {
+    if (contador < stock) {
+      setContador(contador + 1)
+    }
+  }
+
+  function onRest() {
+    if (contador > initial) {
+      setContador(contador - 1)
+    }
+  }
 
   return <>
     <div className="contadorProducto">
-    
-    
-    <button className="masOmenos" onClick = {() => setContador (contador-1)}>-</button>
-    <div >{contador}</div>
-    <button className="masOmenos" onClick = {() => setContador (contador+1)}>+</button>
+      <button className="masOmenos" disabled={contador === initial ? true : false} onClick={() => onRest()}>-</button>
+      <div >{contador}</div>
+      <button className="masOmenos" disabled={contador === stock ? true : false} onClick={() => onAdd()}>+</button>
     </div>
-    <button className="comprando" onClick = {() => setContador (1)}>comprar</button>
-    
-    
-    
-    {contador > 5 && setContador(5)}
-    {contador < 1 && setContador(1)}
+    <button className="comprando" onClick={() => setContador(initial)}>comprar</button>
+
   </>
 }
 
 export default ItemCount
+
 

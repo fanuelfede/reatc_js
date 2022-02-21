@@ -1,6 +1,8 @@
 import React from 'react'
 import ItemListContainer from './ItemListContainer';
 
+
+
 const SeccionPromo = () => {
   return (
     <div className="contenedorSecciones">
@@ -8,12 +10,10 @@ const SeccionPromo = () => {
         <div className="titularSeccion">summer sale</div>
       </div>
       <div className="derechaSecciones">
-        <ItemListContainer/>
-        <ItemListContainer/>
-        <ItemListContainer/>
+        <ItemListContainer />
       </div>
-      
-   </div>
+
+    </div>
   )
 }
 
